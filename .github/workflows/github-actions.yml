@@ -15,6 +15,8 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           uv venv
+          uv pip install pytest
+          uv pip install pytest-playwright
           uv pip install "fastapi[standard]"
           uv pip install sqlmodel
           uv pip install jinja2
@@ -23,7 +25,5 @@ jobs:
         working-directory: my_project
         run: |
           uv venv
-          uv pip install pytest
-          uv pip install pytest-playwright
-          pytest test_main.py
+          pytest
       
