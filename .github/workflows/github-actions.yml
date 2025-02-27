@@ -14,11 +14,13 @@ jobs:
         working-directory: my_project
         run: |
           python -m pip install --upgrade pip
-          uv pip install pytest --system
-          uv pip install pytest-playwright --system
-          uv pip install "fastapi[standard] --system"
-          uv pip install sqlmodel --system
-          uv pip install jinja2 --system
+          uv venv
+          uv pip install pytest
+          uv pip install pytest-playwright
+          uv pip install "fastapi[standard]"
+          uv pip install sqlmodel
+          uv pip install jinja2
+          pytest
 
       - name: run tests
         working-directory: my_project
