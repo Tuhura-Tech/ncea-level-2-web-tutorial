@@ -23,5 +23,5 @@ jobs:
 
       - name: run tests
         working-directory: my_project
-        run: pytest test_main.py
+        run: python -m pytest
       
