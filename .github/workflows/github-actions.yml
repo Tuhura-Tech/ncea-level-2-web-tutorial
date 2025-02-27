@@ -1,1 +1,9 @@
-
+name: Github actions
+run-name: testing out Github actions!
+on: [push]
+jobs:
+  Github-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test build
+        run: fastapi run
