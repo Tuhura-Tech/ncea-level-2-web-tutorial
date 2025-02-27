@@ -10,5 +10,5 @@ jobs:
         with:
           version: 10.1.0
       - name: install deps
-        working-directory: ./my_project
+        working-directory: my_project
         run: pnpm install
