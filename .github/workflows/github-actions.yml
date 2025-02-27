@@ -16,6 +16,7 @@ jobs:
           python -m pip install --upgrade pip
           pnpm pip install pytest pytest-playwright
           pnpm pip install "fastapi[standard]"
+          pnpm pip install sqlmodel
       - name: run tests
         working-directory: my_project
         run: |
