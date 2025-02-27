@@ -6,8 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.2.2
-
       
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4.1.0
+        with:
+          version: 10.1.0
 
       - name: install deps
         working-directory: my_project
@@ -20,6 +23,9 @@ jobs:
 
       - name: run tests
         working-directory: my_project
-        run: |
-          pytest test_main.py
+        run: pytest test_main.py
+      
+      - name: Run
+        working-directory: my_project
+        run: fastapi run
 
