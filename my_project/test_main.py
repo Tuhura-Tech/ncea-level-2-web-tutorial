@@ -1,9 +1,9 @@
 from fastapi.testclient import TestClient
 from sqlmodel import Session, SQLModel, create_engine
-from main import get_session, app, engine, SQLModel
+from main import app, engine, SQLModel
 import pytest
 from playwright.sync_api import Page, expect
-import re
+
 
 @pytest.fixture()
 def test_db():
