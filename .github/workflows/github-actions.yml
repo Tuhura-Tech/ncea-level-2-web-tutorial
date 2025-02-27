@@ -14,10 +14,10 @@ jobs:
         working-directory: my_project
         run: |
           python -m pip install --upgrade pip
-          pnpm install
+          pnpm pip install pytest pytest-playwright
+          pnpm pip install "fastapi[standard]"
       - name: run tests
         working-directory: my_project
         run: |
-          pnpm pip install pytest pytest-playwright
           pytest test_main.py
 
