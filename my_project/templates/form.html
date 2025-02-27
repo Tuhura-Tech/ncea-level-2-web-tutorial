@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %} Create a post {% endblock %}
+{% block head %} Create a new post {% endblock %}
+
+{% block content %}
+<div class="container">
+  
+
+
+
+    <div class="post_form">
+        <form method="POST">
+
+          <div class="input_field">
+            <input type="text" placeholder="Post Title" name="post_title" class="form-control" value="{{post_title}}" >
+          </div>
+          <div class="input_field">
+            <input type="text" placeholder="Post Date" name="post_date" class="form-control" value="{{post_date}}" >
+          </div>
+          <div class="input_field">
+            <textarea  placeholder="Post Content" name="post_content" class="form-control" value="{{post_content}}" rows="4"></textarea>
+          </div>
+
+          <button type="submit" class="submit_button">Submit</button>
+        </form>
+      </div>
+
+      <div class = "row">
+        <div class = "error text">
+          {% for error in errors %}
+          <li>{{error}}</li>
+          {% endfor %}
+        </div>
+      </div>
+
+
+</div>
+
+{% endblock %}
