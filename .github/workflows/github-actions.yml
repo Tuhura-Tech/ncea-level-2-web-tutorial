@@ -25,5 +25,5 @@ jobs:
         working-directory: my_project
         run: |
           uv venv
-          pytest
+          uv run -m pytest
       
