@@ -23,5 +23,7 @@ jobs:
 
       - name: run tests
         working-directory: my_project
-        run: python -m pytest
+        run: |
+          uv venv
+          pytest test_main.py
       
