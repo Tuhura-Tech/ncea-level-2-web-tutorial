@@ -14,7 +14,6 @@ jobs:
         working-directory: my_project
         run: |
           python -m pip install --upgrade pip
-          uv venv
           uv pip install pytest
           uv pip install pytest-playwright
           uv pip install "fastapi[standard]"
@@ -24,6 +23,5 @@ jobs:
       - name: run tests
         working-directory: my_project
         run: |
-          uv venv
-          uv run pytest
+          pytest
       
