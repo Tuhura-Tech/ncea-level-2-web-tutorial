@@ -14,5 +14,6 @@ jobs:
         working-directory: my_project
         run: pnpm install
       - name: run tests
+        working-directory: my_project
         run: pytest test_main.py
 
