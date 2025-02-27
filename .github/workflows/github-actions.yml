@@ -12,8 +12,12 @@ jobs:
           version: 10.1.0
       - name: install deps
         working-directory: my_project
-        run: pnpm install
+        run: |
+          python -m pip install --upgrade pip
+          pnpm install
       - name: run tests
         working-directory: my_project
-        run: pytest test_main.py
+        run: |
+          pnpm pip install pytest pytest-playwright
+          pytest test_main.py
 
