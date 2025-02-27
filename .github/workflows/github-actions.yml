@@ -5,6 +5,7 @@ jobs:
   Github-Actions:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4.2.2
       - name: Setup pnpm
         uses: pnpm/action-setup@v4.1.0
         with:
