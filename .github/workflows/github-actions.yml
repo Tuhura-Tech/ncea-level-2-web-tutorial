@@ -17,6 +17,7 @@ jobs:
           pnpm pip install pytest pytest-playwright
           pnpm pip install "fastapi[standard]"
           pnpm pip install sqlmodel
+          pnpm pip install jinja2
       - name: run tests
         working-directory: my_project
         run: |
