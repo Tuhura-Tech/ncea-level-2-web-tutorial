@@ -6,9 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.2.2
-      
-      - name: Set up UV
-        uses: astral-sh/setup-uv@v5
 
       - name: install deps
         working-directory: my_project
@@ -22,6 +19,5 @@ jobs:
 
       - name: run tests
         working-directory: my_project
-        run: |
-          pytest test_main.py
+        run: pytest test_main.py
       
