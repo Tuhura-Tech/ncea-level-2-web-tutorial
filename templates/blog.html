@@ -6,6 +6,13 @@
 
 {% block content %}
 
+<form class="search-form" action="/search/">
+  <input class="search-input" name="query" type="search" placeholder="Search" aria-label="Search">
+  <button class="btn" type="submit">Search</button>
+</form>
+
+<a href="{{url_for('signup')}}">Register</a>
+
     {% for post in posts %}
         <div class="post">
                 <h2>{{ post.title }}</h2>
